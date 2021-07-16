@@ -11,7 +11,8 @@ public class MyExceptionHandler {
 
 	@ExceptionHandler(value = NullPointerException.class)
 	public String handleNullPointerException(Model model) {
-		
+		System.out.println("Before");
+		System.out.println("This is Release-2.2");
 		model.addAttribute("errorMsg", "Problem Occured, Please Try Later...");
 		
 		return"errorMsg";
