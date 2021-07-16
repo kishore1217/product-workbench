@@ -16,8 +16,12 @@ public class BookController {
 	@RequestMapping(value = "/findPriceById")
 	public String getPriceById(@RequestParam("bookId") String bookId,Model model) {
 		
+		System.out.println("Testing");
+		
 		Double bookPrice=service.findPriceById(bookId);
+		
 		model.addAttribute("price", "BookPrice: "+bookPrice);
+		
 		return"display";
 	}
 	
